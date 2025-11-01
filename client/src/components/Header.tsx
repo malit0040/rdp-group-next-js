@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
+import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -19,10 +20,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/">
             <div className="flex items-center gap-2 hover-elevate rounded-lg px-2 py-1 cursor-pointer" data-testid="link-home-logo">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#024442] to-[#1bc195] flex items-center justify-center">
-                <span className="text-white font-bold text-xl">R</span>
-              </div>
-              <span className="text-2xl font-bold text-foreground">RdP Group</span>
+              <img src={logoImage} alt="RdP Group" className="h-12 w-auto" />
             </div>
           </Link>
 

@@ -1,4 +1,5 @@
 import { Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
+import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold text-foreground mb-2">RdP Group</h3>
+            <img src={logoImage} alt="RdP Group" className="h-16 w-auto mx-auto md:mx-0 mb-3" />
             <p className="text-sm text-muted-foreground">
               A pioneering step towards a promising future
             </p>

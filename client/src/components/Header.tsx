@@ -6,7 +6,7 @@ import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png
 
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
+  { label: "Services", path: "/services" },
   { label: "Portfolio", path: "/portfolio" },
   { label: "Team", path: "/team" },
   { label: "News", path: "/news" },

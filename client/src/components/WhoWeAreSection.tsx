@@ -1,6 +1,5 @@
 import corporateEventImage from '@assets/generated_images/Corporate_event_production_15e50c25.png';
 import royalEventImage from '@assets/generated_images/Saudi_royal_event_ceremony_31477189.png';
-import teamMemberImage from '@assets/generated_images/Saudi_female_team_member_095ee012.png';
 
 export default function WhoWeAreSection() {
   return (
@@ -96,20 +95,6 @@ export default function WhoWeAreSection() {
               />
             </div>
 
-            <div 
-              className="absolute w-64 h-64 overflow-hidden rounded-sm transform rotate-45 shadow-xl"
-              style={{ 
-                top: '15%',
-                right: '5%'
-              }}
-              data-testid="diamond-image-3"
-            >
-              <img 
-                src={teamMemberImage}
-                alt="RdP Team"
-                className="w-full h-full object-cover transform -rotate-45 scale-150"
-              />
-            </div>
           </div>
         </div>
       </div>

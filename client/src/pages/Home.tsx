@@ -2,7 +2,6 @@ import { useLocation } from 'wouter';
 import Header from '@/components/Header';
 import HeroSlider from '@/components/HeroSlider';
 import WhoWeAreSection from '@/components/WhoWeAreSection';
-import AboutSection from '@/components/AboutSection';
 import HorizontalAccordion from '@/components/HorizontalAccordion';
 import ImpactSection from '@/components/ImpactSection';
 import NewsletterSection from '@/components/NewsletterSection';
@@ -22,7 +21,6 @@ export default function Home() {
       <ImpactSection />
       <HorizontalAccordion />
       <WhoWeAreSection />
-      <AboutSection />
       <CTASection />
       <NewsletterSection />
       <Footer />

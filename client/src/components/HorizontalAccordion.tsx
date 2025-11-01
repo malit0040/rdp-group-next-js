@@ -45,14 +45,19 @@ export default function HorizontalAccordion() {
             Excellence in every experience we create
           </p>
         </div>
+      </div>
 
-        <div className="flex h-[600px] gap-2 rounded-lg overflow-hidden">
+      <div className="w-full">
+        <div className="flex h-[600px] gap-2 overflow-hidden">
           {accordionItems.map((item, index) => (
             <div
               key={item.id}
-              className={`relative cursor-pointer transition-all duration-500 ease-in-out overflow-hidden group ${
+              className={`relative cursor-pointer overflow-hidden group ${
                 activeIndex === index ? 'flex-[4]' : 'flex-[0.5]'
               }`}
+              style={{
+                transition: 'flex 0.8s cubic-bezier(0.4, 0, 0.2, 1)'
+              }}
               onClick={() => setActiveIndex(index)}
               onMouseEnter={() => setActiveIndex(index)}
               data-testid={`accordion-item-${index}`}

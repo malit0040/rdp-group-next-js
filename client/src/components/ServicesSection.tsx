@@ -1,46 +1,26 @@
 import ServiceCard from './ServiceCard';
-import { Building2, Users, Crown, Megaphone, FileText, Video, BarChart3, TrendingUp } from 'lucide-react';
+import { Building2, Users, Briefcase, HeartHandshake } from 'lucide-react';
 
 const services = [
   {
-    title: "City Marketing",
-    description: "Strategic campaigns that elevate cities and create lasting impressions across the Kingdom.",
+    title: "Urban Consulting and Innovation",
+    description: "Developing visual and narrative identities that reflect the city's personality and culture",
     icon: Building2
   },
   {
-    title: "Corporate Event Management",
-    description: "Flawless execution of corporate events that inspire and engage your audience.",
+    title: "Smart Promotion and Visitor Experience",
+    description: "Designing interactive experiences that introduce visitors to the city in an innovative way",
     icon: Users
   },
   {
-    title: "Royal Event Production",
-    description: "Prestigious ceremonies crafted with precision, elegance, and cultural resonance.",
-    icon: Crown
+    title: "Investment Services",
+    description: "Highlighting the city's strengths and investment opportunities to attract investors",
+    icon: Briefcase
   },
   {
-    title: "Creative Advertising",
-    description: "Innovative campaigns that connect brands with their audiences authentically.",
-    icon: Megaphone
-  },
-  {
-    title: "Media Content Writing",
-    description: "Compelling narratives that resonate with truth, clarity, and vision.",
-    icon: FileText
-  },
-  {
-    title: "Visual Production",
-    description: "Stunning visuals that capture emotion, movement, and the essence of your story.",
-    icon: Video
-  },
-  {
-    title: "Infographics & Design",
-    description: "Data-driven design that transforms complex information into visual clarity.",
-    icon: BarChart3
-  },
-  {
-    title: "Campaign Management",
-    description: "End-to-end campaign orchestration that delivers measurable impact.",
-    icon: TrendingUp
+    title: "Community Engagement",
+    description: "Enhancing local community belonging and building bridges of cultural cooperation",
+    icon: HeartHandshake
   }
 ];
 
@@ -57,7 +37,7 @@ export default function ServicesSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}

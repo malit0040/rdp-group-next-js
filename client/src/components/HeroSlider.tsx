@@ -61,17 +61,13 @@ export default function HeroSlider({ onExploreClick, onContactClick }: HeroSlide
           <div className="mb-8 animate-in fade-in duration-1000">
             <div className="inline-block mb-4">
               <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight">
-                Experiences that empower your vision to thrive
+                Where Place Transforms into Experience and Identity into Story
               </h1>
             </div>
           </div>
 
-          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl animate-in fade-in duration-1000 delay-200">
-            A pioneering step towards a promising future
-          </p>
-
-          <p className="text-lg text-white/80 mb-10 max-w-2xl animate-in fade-in duration-1000 delay-300">
-            Building experiences, campaigns, and stories that move cities across the Kingdom of Saudi Arabia.
+          <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl animate-in fade-in duration-1000 delay-200">
+            We create a genuine connection between people and places... where details transform into experiences that are felt and told
           </p>
 
           <div className="flex flex-wrap gap-4 animate-in fade-in duration-1000 delay-500">
@@ -81,7 +77,7 @@ export default function HeroSlider({ onExploreClick, onContactClick }: HeroSlide
               onClick={onExploreClick}
               data-testid="button-explore-work"
             >
-              Explore Our Work
+              Discover our services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
 

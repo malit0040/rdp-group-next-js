@@ -7,26 +7,26 @@ import cityscapeImage from '@assets/generated_images/Riyadh_modern_cityscape_9ad
 const accordionItems = [
   {
     id: 1,
-    title: 'City Marketing',
-    description: 'Strategic campaigns that elevate cities and create lasting impressions',
+    title: 'Urban Consulting and Innovation',
+    description: 'Developing visual and narrative identities that reflect the city\'s personality and culture',
     image: cityscapeImage,
   },
   {
     id: 2,
-    title: 'Corporate Events',
-    description: 'Flawless execution of corporate events that inspire and engage',
+    title: 'Smart Promotion and Visitor Experience',
+    description: 'Designing interactive experiences that introduce visitors to the city in an innovative way',
     image: corporateEventImage,
   },
   {
     id: 3,
-    title: 'Royal Ceremonies',
-    description: 'Prestigious ceremonies crafted with precision and elegance',
+    title: 'Investment Services',
+    description: 'Highlighting the city\'s strengths and investment opportunities to attract investors',
     image: royalEventImage,
   },
   {
     id: 4,
-    title: 'Creative Campaigns',
-    description: 'Innovative advertising that connects brands authentically',
+    title: 'Community Engagement',
+    description: 'Enhancing local community belonging and building bridges of cultural cooperation',
     image: advertisingImage,
   },
 ];

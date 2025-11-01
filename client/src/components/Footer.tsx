@@ -26,31 +26,31 @@ export default function Footer() {
               style={{ color: '#1bc195' }}
               data-testid="text-footer-contact-heading"
             >
-              Contact us
+              Contact
             </h3>
             <div className="space-y-4">
               <a 
-                href="tel:+966555175495" 
-                className="flex items-center gap-3 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors"
-                data-testid="link-footer-phone"
-              >
-                <Phone className="h-4 w-4 flex-shrink-0" style={{ color: '#1bc195' }} />
-                <span className="text-sm">+966 555 175 495</span>
-              </a>
-              <a 
-                href="mailto:info@rdpgroup.sa" 
+                href="mailto:info@citymarketing.sa" 
                 className="flex items-center gap-3 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors"
                 data-testid="link-footer-email"
               >
                 <Mail className="h-4 w-4 flex-shrink-0" style={{ color: '#1bc195' }} />
-                <span className="text-sm">info@rdpgroup.sa</span>
+                <span className="text-sm">info@citymarketing.sa</span>
+              </a>
+              <a 
+                href="tel:+966112345678" 
+                className="flex items-center gap-3 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors"
+                data-testid="link-footer-phone"
+              >
+                <Phone className="h-4 w-4 flex-shrink-0" style={{ color: '#1bc195' }} />
+                <span className="text-sm">+966 11 234 5678</span>
               </a>
               <div 
                 className="flex items-start gap-3 text-white/90 px-3 py-2"
                 data-testid="text-footer-address"
               >
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: '#1bc195' }} />
-                <span className="text-sm">Riyadh - Kingdom of Saudi Arabia</span>
+                <span className="text-sm">Riyadh, Saudi Arabia</span>
               </div>
             </div>
           </div>

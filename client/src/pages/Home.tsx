@@ -16,7 +16,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <HeroSlider 
-        onExploreClick={() => setLocation('/portfolio')}
+        onExploreClick={() => setLocation('/services')}
         onContactClick={() => setLocation('/contact')}
       />
       <ImpactSection />

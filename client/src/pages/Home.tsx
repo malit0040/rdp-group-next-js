@@ -2,7 +2,7 @@ import { useLocation } from 'wouter';
 import Header from '@/components/Header';
 import HeroSlider from '@/components/HeroSlider';
 import AboutSection from '@/components/AboutSection';
-import ServicesSection from '@/components/ServicesSection';
+import HorizontalAccordion from '@/components/HorizontalAccordion';
 import ImpactSection from '@/components/ImpactSection';
 import Footer from '@/components/Footer';
 
@@ -17,7 +17,7 @@ export default function Home() {
         onContactClick={() => setLocation('/contact')}
       />
       <AboutSection />
-      <ServicesSection />
+      <HorizontalAccordion />
       <ImpactSection />
       <Footer />
     </div>

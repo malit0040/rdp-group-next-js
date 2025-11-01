@@ -8,7 +8,6 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "Services", path: "/services" },
   { label: "Projects", path: "/projects" },
-  { label: "Team", path: "/team" },
   { label: "News", path: "/news" },
   { label: "Contact", path: "/contact" },
 ];
@@ -64,19 +63,6 @@ export default function Header() {
             >
               <Languages className="h-5 w-5" />
               <span className="sr-only">Toggle language</span>
-            </Button>
-            <Button
-              variant="outline"
-              className="hidden md:inline-flex rounded-full"
-              data-testid="button-sign-in"
-            >
-              Sign In
-            </Button>
-            <Button
-              className="rounded-full bg-[#024442] hover:bg-[#024442]/90"
-              data-testid="button-request-demo"
-            >
-              Request Demo
             </Button>
           </div>
         </div>

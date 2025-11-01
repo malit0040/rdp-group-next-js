@@ -21,8 +21,8 @@ export default function Home() {
       <ImpactSection />
       <HorizontalAccordion />
       <AboutSection />
-      <NewsletterSection />
       <CTASection />
+      <NewsletterSection />
       <Footer />
     </div>
   );

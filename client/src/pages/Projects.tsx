@@ -3,25 +3,28 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, CheckCircle } from 'lucide-react';
-
-const projects = [
-  {
-    id: 1,
-    title: 'Riyadh Projects Counter',
-    description: 'A media platform interested in publishing the latest developments of Riyadh city projects, their news and details',
-    year: '2024',
-    status: 'Completed',
-  },
-  {
-    id: 2,
-    title: 'Riyadh Colors',
-    description: 'A platform that cares about publishing all events and exhibitions and focusing on small and medium projects in the capital',
-    year: '2024',
-    status: 'Completed',
-  },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Projects() {
+  const { t } = useLanguage();
+  
+  const projects = [
+    {
+      id: 1,
+      title: t('projects.riyadhProjects'),
+      description: t('projects.riyadhProjectsDesc'),
+      year: '2024',
+      status: t('projects.completed'),
+    },
+    {
+      id: 2,
+      title: t('projects.riyadhColors'),
+      description: t('projects.riyadhColorsDesc'),
+      year: '2024',
+      status: t('projects.completed'),
+    },
+  ];
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -29,10 +32,10 @@ export default function Projects() {
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center">
             <h1 className="text-6xl font-bold mb-6 text-foreground" data-testid="text-projects-heading">
-              Our Projects
+              {t('projects.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Showcasing our commitment to transforming urban experiences across the Kingdom
+              {t('projects.subtitle')}
             </p>
           </div>
 
@@ -59,7 +62,7 @@ export default function Projects() {
                 <CardFooter>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Calendar className="h-4 w-4" />
-                    <span className="text-sm" data-testid={`text-project-year-${project.id}`}>{project.year}</span>
+                    <span className="text-sm" data-testid={`text-project-year-${project.id}`}>{t('projects.year')}: {project.year}</span>
                   </div>
                 </CardFooter>
               </Card>

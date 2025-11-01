@@ -3,59 +3,62 @@ import ServicesHero from '@/components/ServicesHero';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Building2, Users, Briefcase, HeartHandshake, CheckCircle } from 'lucide-react';
-
-const services = [
-  {
-    id: 1,
-    title: "Urban Consulting and Innovation",
-    description: "Developing visual and narrative identities that reflect the city's personality and culture",
-    icon: Building2,
-    offerings: [
-      "Preparing long-term strategic plans for cities",
-      "Developing comprehensive visual identity for the city",
-      "Urban studies and future planning",
-      "City branding strategies"
-    ]
-  },
-  {
-    id: 2,
-    title: "Smart Promotion and Visitor Experience",
-    description: "Designing interactive experiences that introduce visitors to the city in an innovative way",
-    icon: Users,
-    offerings: [
-      "Designing visitor and resident journeys",
-      "Seasonal promotional campaigns",
-      "Interactive events",
-      "Organizing local events and festivals"
-    ]
-  },
-  {
-    id: 3,
-    title: "Investment Services",
-    description: "Highlighting the city's strengths and investment opportunities to attract investors",
-    icon: Briefcase,
-    offerings: [
-      "Marketing investment opportunities",
-      "Strategic partnerships and international cooperation",
-      "Organizing introductory tours for investors",
-      "Targeted promotional campaigns"
-    ]
-  },
-  {
-    id: 4,
-    title: "Community Engagement and Cultural Exchange Services",
-    description: "Enhancing local community belonging and building bridges of cultural cooperation",
-    icon: HeartHandshake,
-    offerings: [
-      "Designing community engagement programs",
-      "Activating local and creative communities",
-      "Organizing cultural and social events",
-      "International events and cultural exchange"
-    ]
-  }
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Services() {
+  const { t } = useLanguage();
+  
+  const services = [
+    {
+      id: 1,
+      title: t('services.urban.title'),
+      description: t('services.urban.desc'),
+      icon: Building2,
+      offerings: [
+        t('servicesPage.urban.offering1'),
+        t('servicesPage.urban.offering2'),
+        t('servicesPage.urban.offering3'),
+        t('servicesPage.urban.offering4'),
+      ]
+    },
+    {
+      id: 2,
+      title: t('services.promotion.title'),
+      description: t('services.promotion.desc'),
+      icon: Users,
+      offerings: [
+        t('servicesPage.promotion.offering1'),
+        t('servicesPage.promotion.offering2'),
+        t('servicesPage.promotion.offering3'),
+        t('servicesPage.promotion.offering4'),
+      ]
+    },
+    {
+      id: 3,
+      title: t('services.investment.title'),
+      description: t('services.investment.desc'),
+      icon: Briefcase,
+      offerings: [
+        t('servicesPage.investment.offering1'),
+        t('servicesPage.investment.offering2'),
+        t('servicesPage.investment.offering3'),
+        t('servicesPage.investment.offering4'),
+      ]
+    },
+    {
+      id: 4,
+      title: t('services.community.title'),
+      description: t('services.community.desc'),
+      icon: HeartHandshake,
+      offerings: [
+        t('servicesPage.community.offering1'),
+        t('servicesPage.community.offering2'),
+        t('servicesPage.community.offering3'),
+        t('servicesPage.community.offering4'),
+      ]
+    }
+  ];
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -81,7 +84,7 @@ export default function Services() {
                         {service.description}
                       </p>
                       <p className="text-lg font-semibold text-foreground">
-                        What We Offer:
+                        {t('servicesPage.whatWeOffer')}
                       </p>
                     </div>
                   </div>

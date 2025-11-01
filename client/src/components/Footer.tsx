@@ -1,7 +1,10 @@
 import { Phone, Mail, MapPin, ExternalLink, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
 
 export default function Footer() {
+  const { t } = useLanguage();
+  
   return (
     <footer className="py-16 relative overflow-hidden" style={{ backgroundColor: '#024442' }}>
       <div 
@@ -26,7 +29,7 @@ export default function Footer() {
               style={{ color: '#1bc195' }}
               data-testid="text-footer-contact-heading"
             >
-              Contact
+              {t('footer.contact')}
             </h3>
             <div className="space-y-4">
               <a 
@@ -69,7 +72,7 @@ export default function Footer() {
               style={{ color: '#1bc195' }}
               data-testid="text-footer-platforms-heading"
             >
-              Our platforms
+              {t('footer.platforms')}
             </h3>
             <div className="space-y-3">
               <a 
@@ -77,7 +80,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors group"
                 data-testid="link-footer-events"
               >
-                <span className="text-sm">RdP Events Platform</span>
+                <span className="text-sm">{t('footer.eventsplatform')}</span>
                 <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#1bc195' }} />
               </a>
               <a 
@@ -85,7 +88,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors group"
                 data-testid="link-footer-marketing"
               >
-                <span className="text-sm">RdP Marketing Hub</span>
+                <span className="text-sm">{t('footer.marketingHub')}</span>
                 <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#1bc195' }} />
               </a>
               <a 
@@ -93,7 +96,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors group"
                 data-testid="link-footer-portfolio"
               >
-                <span className="text-sm">Portfolio Showcase</span>
+                <span className="text-sm">{t('footer.portfolio')}</span>
                 <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#1bc195' }} />
               </a>
             </div>
@@ -105,10 +108,10 @@ export default function Footer() {
               style={{ color: '#1bc195' }}
               data-testid="text-footer-about-heading"
             >
-              Who are we?
+              {t('footer.about')}
             </h3>
             <p className="text-white/90 text-sm leading-relaxed mb-6" data-testid="text-footer-about-description">
-              RdP Group is a Saudi conglomerate specializing in city marketing, event production, and royal ceremony coordination. We deliver excellence across the Kingdom of Saudi Arabia.
+              {t('footer.aboutDesc')}
             </p>
             <img 
               src={logoImage} 
@@ -123,7 +126,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-white/70 text-sm" data-testid="text-footer-copyright">
-              © {new Date().getFullYear()} RdP Group. All rights reserved.
+              © {new Date().getFullYear()} RdP Group. {t('footer.copyright')}
             </p>
             
             <div className="flex gap-3">

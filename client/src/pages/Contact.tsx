@@ -6,8 +6,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Contact() {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -29,10 +32,10 @@ export default function Contact() {
 
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold mb-4" data-testid="text-contact-heading">
-                  Contact Information
+                  {t('contact.heading')}
                 </h2>
                 <p className="text-white/90 mb-12" data-testid="text-contact-description">
-                  Fill up the form and our Team will get back to you within 24 hours.
+                  {t('contact.description')}
                 </p>
 
                 <div className="space-y-6 mb-16">
@@ -114,7 +117,7 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="firstName" className="text-sm font-semibold mb-2 block">
-                      First Name
+                      {t('contact.firstName')}
                     </Label>
                     <Input
                       id="firstName"
@@ -125,7 +128,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <Label htmlFor="lastName" className="text-sm font-semibold mb-2 block">
-                      Last Name
+                      {t('contact.lastName')}
                     </Label>
                     <Input
                       id="lastName"
@@ -139,7 +142,7 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="email" className="text-sm font-semibold mb-2 block">
-                      Email
+                      {t('contact.email')}
                     </Label>
                     <Input
                       id="email"
@@ -151,7 +154,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <Label htmlFor="phone" className="text-sm font-semibold mb-2 block">
-                      Phone
+                      {t('contact.phone')}
                     </Label>
                     <Input
                       id="phone"
@@ -165,35 +168,35 @@ export default function Contact() {
 
                 <div>
                   <Label className="text-sm font-semibold mb-4 block">
-                    What service are you interested in?
+                    {t('contact.service')}
                   </Label>
                   <RadioGroup defaultValue="urban" className="grid grid-cols-2 gap-4">
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="urban" id="urban" data-testid="radio-urban" />
-                      <Label htmlFor="urban" className="cursor-pointer">Urban Consulting</Label>
+                      <Label htmlFor="urban" className="cursor-pointer">{t('contact.urbanConsulting')}</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="promotion" id="promotion" data-testid="radio-promotion" />
-                      <Label htmlFor="promotion" className="cursor-pointer">Smart Promotion</Label>
+                      <Label htmlFor="promotion" className="cursor-pointer">{t('contact.smartPromotion')}</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="investment" id="investment" data-testid="radio-investment" />
-                      <Label htmlFor="investment" className="cursor-pointer">Investment Services</Label>
+                      <Label htmlFor="investment" className="cursor-pointer">{t('contact.investmentServices')}</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="community" id="community" data-testid="radio-community" />
-                      <Label htmlFor="community" className="cursor-pointer">Community Engagement</Label>
+                      <Label htmlFor="community" className="cursor-pointer">{t('contact.communityEngagement')}</Label>
                     </div>
                   </RadioGroup>
                 </div>
 
                 <div>
                   <Label htmlFor="message" className="text-sm font-semibold mb-2 block">
-                    Message
+                    {t('contact.message')}
                   </Label>
                   <Textarea
                     id="message"
-                    placeholder="Write your message..."
+                    placeholder={t('contact.messagePlaceholder')}
                     rows={6}
                     className="rounded-lg resize-none"
                     data-testid="textarea-message"
@@ -207,7 +210,7 @@ export default function Contact() {
                   style={{ backgroundColor: '#024442' }}
                   data-testid="button-send-message"
                 >
-                  Send Message
+                  {t('contact.send')}
                 </Button>
               </form>
             </div>

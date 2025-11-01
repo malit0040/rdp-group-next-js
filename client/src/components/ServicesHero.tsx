@@ -1,6 +1,9 @@
 import corporateEventImage from '@assets/generated_images/Corporate_event_production_15e50c25.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function ServicesHero() {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative min-h-[70vh] flex items-end overflow-hidden pt-20">
       <div className="absolute inset-0">
@@ -26,7 +29,7 @@ export default function ServicesHero() {
               style={{ fontFamily: 'Georgia, serif' }}
               data-testid="text-services-hero-heading"
             >
-              Marketing and event solutions that empower your vision to thrive
+              {t('servicesPage.subtitle')}
             </h1>
           </div>
         </div>

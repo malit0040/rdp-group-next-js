@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Languages, Menu, X } from "lucide-react";
+import { Languages, Menu } from "lucide-react";
 import { useState } from "react";
 import {
   Sheet,
@@ -9,25 +9,21 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
-
-const navItems = [
-  { label: "Home", path: "/" },
-  { label: "Services", path: "/services" },
-  { label: "Projects", path: "/projects" },
-  { label: "News", path: "/news" },
-  { label: "Contact", path: "/contact" },
-];
 
 export default function Header() {
   const [location] = useLocation();
-  const [language, setLanguage] = useState<'en' | 'ar'>('en');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t, toggleLanguage } = useLanguage();
 
-  const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'ar' : 'en');
-    console.log('Language toggled to:', language === 'en' ? 'ar' : 'en');
-  };
+  const navItems = [
+    { label: t('nav.home'), path: "/" },
+    { label: t('nav.services'), path: "/services" },
+    { label: t('nav.projects'), path: "/projects" },
+    { label: t('nav.news'), path: "/news" },
+    { label: t('nav.contact'), path: "/contact" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
@@ -87,7 +83,7 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
+                  <SheetTitle>{t('nav.menu')}</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (

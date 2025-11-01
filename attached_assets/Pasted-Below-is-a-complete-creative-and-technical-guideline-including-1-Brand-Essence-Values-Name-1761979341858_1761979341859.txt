@@ -1,0 +1,242 @@
+Below is a complete creative and technical guideline, including:
+
+🟩 1. Brand Essence & Values
+
+Name: RdP Group
+Tagline: A pioneering step towards a promising future
+
+Core Values:
+
+Royal Precision: Reflecting the excellence and elegance of Saudi heritage.
+
+Creative Integrity: Every campaign aligns with truth, clarity, and vision.
+
+Cultural Resonance: Designs and experiences rooted in Saudi identity.
+
+Innovation in Motion: Blending tradition with modern digital innovation.
+
+Partnership for Impact: Building lasting collaborations that shape cities, brands, and moments.
+
+🟩 2. Website Structure
+Landing Page
+
+Purpose: Immediate brand impact and storytelling through visuals.
+
+Sections:
+
+Hero Section
+
+Dark green gradient background (#024442 → #1bc195)
+
+Large minimalistic RdP Group logo centered
+
+Tagline: A pioneering step towards a promising future
+
+Subtext: “Building experiences, campaigns, and stories that move cities.”
+
+CTA Buttons:
+
+“Explore Our Work”
+
+“Contact Us”
+
+About RdP
+
+Split layout: image (video montage of royal events or Saudi landmarks) + text
+
+Headline: Who We Are
+
+Copy:
+
+RdP Group is a Saudi conglomerate specializing in city marketing, corporate event management, royal ceremonies, and creative advertising.
+With a footprint across the Kingdom, we deliver powerful campaigns that bridge innovation and culture.
+
+Our Services
+
+Grid cards with hover animations (shadow + green accent line)
+
+Services:
+
+City Marketing
+
+Corporate Event Management
+
+Royal Event Production
+
+Creative Advertising
+
+Media Content Writing
+
+Visual Production
+
+Infographics & Design
+
+Campaign Management
+
+Our Impact
+
+Dark background (#262624) with animated numbers:
+
+400+ successful campaigns
+
+1,000+ followers
+
+1M+ post impressions
+
+500+ brand visits/month
+
+300+ monthly publications
+
+Portfolio Showcase
+
+Masonry grid with hover overlay (logo + project name)
+
+Categories filter (Events | Advertising | Production | Media)
+
+Meet the Team
+
+Circular headshots with minimal white border
+
+Hover: shows role and LinkedIn link
+
+Background: light gradient #f6f7ed
+
+Contact & Collaboration
+
+Form: name, email, company, message
+
+WhatsApp & phone integrated
+
+CTA: “Let’s Build the Next Big Story”
+
+Footer: minimalist with logo, copyright, and social links
+
+🟩 3. Visual Identity for the Website
+Primary Colors
+Role	HEX	Usage
+Main Deep Green	#024442	Primary background, buttons, call-to-action
+Bright Green	#1bc195	Accents, highlights, hover effects
+Charcoal Black	#262624	Typography and dark backgrounds
+Off-White	#f6f7ed	Text backgrounds, section dividers
+Secondary Colors
+Role	HEX	Usage
+Royal Purple	#8c55b7	Highlights and special events
+Gold Accent	#cece45	For premium or royal highlights
+🟩 4. Typography
+
+Primary Typeface: Bahij Janna (Regular / Bold)
+
+Backup: Poppins (for English text)
+
+Usage:
+
+Headings: Bahij Janna Bold (all caps)
+
+Subheadings: Bahij Janna Regular
+
+Body Text: Poppins Regular, 16px
+
+Callouts: Italic or Gold accent color (#cece45)
+
+🟩 5. UI / UX Design System
+Buttons
+
+Rounded 2xl, padded (px-6 py-3)
+
+Default: green gradient (#024442 → #1bc195)
+
+Hover: brightened gradient with white text glow
+
+Backgrounds
+
+Landing hero: dark green gradient
+
+Section separators: diagonal or curve overlays using light green pattern from brand motif
+
+Portfolio & stats: dark mode with floating animations
+
+Cards
+
+White background (#f6f7ed)
+
+Subtle shadow (0 4px 20px rgba(0,0,0,0.08))
+
+Rounded corners (2xl)
+
+Hover: 1px green border (#1bc195) + scale(1.02)
+
+Icons
+
+Style: minimal outline
+
+Color: dark green or gold
+
+Use lucide-react / Feather-style icons
+
+Animations
+
+Subtle fade-ins, parallax background on hero
+
+Number counters animate on scroll
+
+Gradient motion background for “Our Impact”
+
+🟩 6. Imagery & Photography Guidelines
+
+Use high-quality visuals from real events, cityscapes, and Saudi culture.
+
+Color grade: Slightly warm with green tone to match brand.
+
+Focus: Emotion, movement, and audience engagement.
+
+Avoid stocky or artificial poses.
+
+🟩 7. Tone of Voice & Copywriting
+
+Tone: Confident, refined, visionary.
+Language: Bilingual — English and Arabic optional toggle.
+Voice Attributes:
+
+Professional yet creative
+
+Royal but approachable
+
+Ambitious, future-forward
+
+Sample CTA Copy:
+
+“Your story deserves a royal stage.”
+
+“We build connections that move cities.”
+
+“From vision to visibility — discover RdP.”
+
+🟩 8. Technical Recommendations
+
+Framework: Next.js / React
+
+Animations: Framer Motion
+
+CMS: Strapi or Sanity for easy content updates
+
+Hosting: Vercel / AWS
+
+Email / Contact: Integrate with SMTP or Formspree
+
+Analytics: Google Analytics + Meta Pixel
+
+🟩 9. SEO & Accessibility
+
+Meta: “RdP Group — Saudi Arabia’s Premier Marketing and Event Management Conglomerate”
+
+Keywords: City Marketing Saudi Arabia, Royal Events KSA, Corporate Event Management Riyadh, Creative Advertising Agency
+
+Accessibility: High-contrast color text, alt text for all images, Arabic RTL support
+
+🟩 10. Final Mood Direction
+
+Overall Feel: Luxurious, Saudi-modern, confident
+
+Look: Gradient greens + gold, clean typography, bold imagery
+
+Experience: Immersive scroll storytelling with crisp animations

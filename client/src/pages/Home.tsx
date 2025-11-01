@@ -4,6 +4,8 @@ import HeroSlider from '@/components/HeroSlider';
 import AboutSection from '@/components/AboutSection';
 import HorizontalAccordion from '@/components/HorizontalAccordion';
 import ImpactSection from '@/components/ImpactSection';
+import NewsletterSection from '@/components/NewsletterSection';
+import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -19,6 +21,8 @@ export default function Home() {
       <ImpactSection />
       <HorizontalAccordion />
       <AboutSection />
+      <NewsletterSection />
+      <CTASection />
       <Footer />
     </div>
   );

@@ -1,7 +1,14 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Languages } from "lucide-react";
+import { Languages, Menu, X } from "lucide-react";
 import { useState } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
 
 const navItems = [
@@ -15,6 +22,7 @@ const navItems = [
 export default function Header() {
   const [location] = useLocation();
   const [language, setLanguage] = useState<'en' | 'ar'>('en');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'ar' : 'en');
@@ -64,6 +72,42 @@ export default function Header() {
               <Languages className="h-5 w-5" />
               <span className="sr-only">Toggle language</span>
             </Button>
+            
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="md:hidden rounded-full"
+                  data-testid="button-mobile-menu"
+                >
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <SheetHeader>
+                  <SheetTitle>Menu</SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-4 mt-8">
+                  {navItems.map((item) => (
+                    <Link key={item.path} href={item.path}>
+                      <div
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`px-6 py-3 rounded-lg transition-all cursor-pointer text-lg ${
+                          location === item.path
+                            ? "bg-primary text-primary-foreground"
+                            : "text-foreground hover-elevate"
+                        }`}
+                        data-testid={`link-mobile-nav-${item.label.toLowerCase()}`}
+                      >
+                        {item.label}
+                      </div>
+                    </Link>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>

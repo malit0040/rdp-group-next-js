@@ -30,12 +30,20 @@ export default function Footer() {
             </h3>
             <div className="space-y-4">
               <a 
-                href="mailto:info@citymarketing.sa" 
+                href="mailto:support@rdp-ksa.com" 
                 className="flex items-center gap-3 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors"
-                data-testid="link-footer-email"
+                data-testid="link-footer-email-support"
               >
                 <Mail className="h-4 w-4 flex-shrink-0" style={{ color: '#1bc195' }} />
-                <span className="text-sm">info@citymarketing.sa</span>
+                <span className="text-sm">support@rdp-ksa.com</span>
+              </a>
+              <a 
+                href="mailto:ceo@rdp-ksa.com" 
+                className="flex items-center gap-3 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors"
+                data-testid="link-footer-email-ceo"
+              >
+                <Mail className="h-4 w-4 flex-shrink-0" style={{ color: '#1bc195' }} />
+                <span className="text-sm">ceo@rdp-ksa.com</span>
               </a>
               <a 
                 href="tel:+966112345678" 

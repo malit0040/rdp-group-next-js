@@ -46,12 +46,21 @@ export default function Contact() {
                   </a>
 
                   <a 
-                    href="mailto:info@citymarketing.sa" 
+                    href="mailto:support@rdp-ksa.com" 
                     className="flex items-center gap-4 text-white/90 hover-elevate rounded-lg p-3 transition-colors"
-                    data-testid="link-contact-email"
+                    data-testid="link-contact-email-support"
                   >
                     <Mail className="h-5 w-5" />
-                    <span>info@citymarketing.sa</span>
+                    <span>support@rdp-ksa.com</span>
+                  </a>
+
+                  <a 
+                    href="mailto:ceo@rdp-ksa.com" 
+                    className="flex items-center gap-4 text-white/90 hover-elevate rounded-lg p-3 transition-colors"
+                    data-testid="link-contact-email-ceo"
+                  >
+                    <Mail className="h-5 w-5" />
+                    <span>ceo@rdp-ksa.com</span>
                   </a>
 
                   <div 

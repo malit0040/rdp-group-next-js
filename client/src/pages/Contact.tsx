@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="pt-20 min-h-screen flex items-center justify-center bg-background py-12">
+      <div className="pt-32 pb-12 flex items-center justify-center bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl">
             <div 

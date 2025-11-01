@@ -8,6 +8,7 @@ const services = [
   {
     id: 1,
     title: "Urban Consulting and Innovation",
+    description: "Developing visual and narrative identities that reflect the city's personality and culture",
     icon: Building2,
     offerings: [
       "Preparing long-term strategic plans for cities",
@@ -19,6 +20,7 @@ const services = [
   {
     id: 2,
     title: "Smart Promotion and Visitor Experience",
+    description: "Designing interactive experiences that introduce visitors to the city in an innovative way",
     icon: Users,
     offerings: [
       "Designing visitor and resident journeys",
@@ -30,6 +32,7 @@ const services = [
   {
     id: 3,
     title: "Investment Services",
+    description: "Highlighting the city's strengths and investment opportunities to attract investors",
     icon: Briefcase,
     offerings: [
       "Marketing investment opportunities",
@@ -41,6 +44,7 @@ const services = [
   {
     id: 4,
     title: "Community Engagement and Cultural Exchange Services",
+    description: "Enhancing local community belonging and building bridges of cultural cooperation",
     icon: HeartHandshake,
     offerings: [
       "Designing community engagement programs",
@@ -70,10 +74,13 @@ export default function Services() {
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-3xl mb-2" data-testid={`text-service-title-${service.id}`}>
+                      <CardTitle className="text-3xl mb-3" data-testid={`text-service-title-${service.id}`}>
                         {service.title}
                       </CardTitle>
-                      <p className="text-lg font-semibold text-muted-foreground mb-4">
+                      <p className="text-lg text-muted-foreground mb-6" data-testid={`text-service-description-${service.id}`}>
+                        {service.description}
+                      </p>
+                      <p className="text-lg font-semibold text-foreground">
                         What We Offer:
                       </p>
                     </div>

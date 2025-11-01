@@ -7,7 +7,12 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
-            <img src={logoImage} alt="RdP Group" className="h-16 w-auto mx-auto md:mx-0 mb-3" />
+            <img 
+              src={logoImage} 
+              alt="RdP Group" 
+              className="h-14 object-contain mx-auto md:mx-0 mb-3" 
+              style={{ filter: 'invert(1)' }}
+            />
             <p className="text-sm text-muted-foreground">
               A pioneering step towards a promising future
             </p>

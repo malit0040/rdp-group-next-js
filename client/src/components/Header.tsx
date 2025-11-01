@@ -1,5 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
+import { Languages } from "lucide-react";
+import { useState } from "react";
 import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
 
 const navItems = [
@@ -13,6 +15,12 @@ const navItems = [
 
 export default function Header() {
   const [location] = useLocation();
+  const [language, setLanguage] = useState<'en' | 'ar'>('en');
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'en' ? 'ar' : 'en');
+    console.log('Language toggled to:', language === 'en' ? 'ar' : 'en');
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
@@ -20,7 +28,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/">
             <div className="flex items-center gap-2 hover-elevate rounded-lg px-2 py-1 cursor-pointer" data-testid="link-home-logo">
-              <img src={logoImage} alt="RdP Group" className="h-12 w-auto" />
+              <img 
+                src={logoImage} 
+                alt="RdP Group" 
+                className="h-10 object-contain"
+                style={{ filter: 'invert(1)' }}
+              />
             </div>
           </Link>
 
@@ -42,6 +55,16 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full"
+              onClick={toggleLanguage}
+              data-testid="button-language-toggle"
+            >
+              <Languages className="h-5 w-5" />
+              <span className="sr-only">Toggle language</span>
+            </Button>
             <Button
               variant="outline"
               className="hidden md:inline-flex rounded-full"

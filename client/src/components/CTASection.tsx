@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function CTASection() {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative overflow-hidden mb-0">
       <div 
@@ -37,10 +40,10 @@ export default function CTASection() {
               style={{ fontFamily: 'Georgia, serif' }}
               data-testid="text-cta-heading"
             >
-              Experience excellence in every event
+              {t('cta.title')}
             </h2>
             <p className="text-xl text-white/80 mb-8" data-testid="text-cta-description">
-              Partner with the Kingdom's premier marketing and event production specialists.
+              {t('cta.description')}
             </p>
             <Button
               size="lg"
@@ -48,7 +51,7 @@ export default function CTASection() {
               className="rounded-full bg-white text-foreground hover:bg-white/90 border-white px-8 group"
               data-testid="button-cta-connect"
             >
-              Get connected
+              {t('cta.button')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>

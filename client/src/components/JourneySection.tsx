@@ -1,31 +1,34 @@
 import { Target, Lightbulb, FileText, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 import directorImage from '@assets/generated_images/Marketing_director_headshot_b771cf32.png';
 
-const journeySteps = [
-  {
-    icon: Target,
-    title: 'Strategy',
-    description: 'We learn about your vision and key objectives to develop a winning concept.',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Creative',
-    description: 'We brainstorm engaging ideas and designs that perfectly match the strategy.',
-  },
-  {
-    icon: FileText,
-    title: 'Content',
-    description: 'We create ways to highlight you and your mission throughout the messaging and experience.',
-  },
-  {
-    icon: Rocket,
-    title: 'Production',
-    description: 'We deliver flawless event management and productions that exceed expectations.',
-  },
-];
-
 export default function JourneySection() {
+  const { t } = useLanguage();
+  
+  const journeySteps = [
+    {
+      icon: Target,
+      title: t('journey.step1.title'),
+      description: t('journey.step1.desc'),
+    },
+    {
+      icon: Lightbulb,
+      title: t('journey.step2.title'),
+      description: t('journey.step2.desc'),
+    },
+    {
+      icon: FileText,
+      title: t('journey.step3.title'),
+      description: t('journey.step3.desc'),
+    },
+    {
+      icon: Rocket,
+      title: t('journey.step4.title'),
+      description: t('journey.step4.desc'),
+    },
+  ];
+  
   return (
     <section 
       className="py-24 relative overflow-hidden"
@@ -46,7 +49,7 @@ export default function JourneySection() {
           className="text-5xl md:text-6xl font-bold text-white text-center mb-16"
           data-testid="text-journey-heading"
         >
-          Your Journey With Us
+          {t('journey.title')}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -99,14 +102,14 @@ export default function JourneySection() {
         >
           <div>
             <blockquote className="text-2xl md:text-3xl font-serif text-foreground mb-6 leading-relaxed">
-              "The greatest work comes from a unified team, and that team includes our clients, where we ideate, design, and deliver together."
+              "{t('journey.testimonial')}"
             </blockquote>
             <div className="border-t pt-6">
               <p className="font-bold text-lg text-foreground" data-testid="text-testimonial-name">
-                Ahmed Al-Rashid
+                {t('journey.testimonialAuthor')}
               </p>
               <p className="text-muted-foreground" data-testid="text-testimonial-title">
-                Managing Director, RdP Group
+                {t('journey.testimonialRole')}
               </p>
             </div>
             <Button
@@ -116,7 +119,7 @@ export default function JourneySection() {
               style={{ backgroundColor: '#024442' }}
               data-testid="button-about-rdp"
             >
-              About RdP Group
+              {t('whoWeAre.label')}
             </Button>
           </div>
           <div className="flex justify-center">

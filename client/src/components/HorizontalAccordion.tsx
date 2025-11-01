@@ -1,48 +1,50 @@
 import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import corporateEventImage from '@assets/generated_images/Corporate_event_production_15e50c25.png';
 import royalEventImage from '@assets/generated_images/Saudi_royal_event_ceremony_31477189.png';
 import advertisingImage from '@assets/generated_images/Advertising_campaign_production_f6b49896.png';
 import cityscapeImage from '@assets/generated_images/Riyadh_modern_cityscape_9ad139d0.png';
 
-const accordionItems = [
-  {
-    id: 1,
-    title: 'Urban Consulting and Innovation',
-    description: 'Developing visual and narrative identities that reflect the city\'s personality and culture',
-    image: cityscapeImage,
-  },
-  {
-    id: 2,
-    title: 'Smart Promotion and Visitor Experience',
-    description: 'Designing interactive experiences that introduce visitors to the city in an innovative way',
-    image: corporateEventImage,
-  },
-  {
-    id: 3,
-    title: 'Investment Services',
-    description: 'Highlighting the city\'s strengths and investment opportunities to attract investors',
-    image: royalEventImage,
-  },
-  {
-    id: 4,
-    title: 'Community Engagement',
-    description: 'Enhancing local community belonging and building bridges of cultural cooperation',
-    image: advertisingImage,
-  },
-];
-
 export default function HorizontalAccordion() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useLanguage();
+  
+  const accordionItems = [
+    {
+      id: 1,
+      title: t('services.urban.title'),
+      description: t('services.urban.desc'),
+      image: cityscapeImage,
+    },
+    {
+      id: 2,
+      title: t('services.promotion.title'),
+      description: t('services.promotion.desc'),
+      image: corporateEventImage,
+    },
+    {
+      id: 3,
+      title: t('services.investment.title'),
+      description: t('services.investment.desc'),
+      image: royalEventImage,
+    },
+    {
+      id: 4,
+      title: t('services.community.title'),
+      description: t('services.community.desc'),
+      image: advertisingImage,
+    },
+  ];
 
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6 mb-12">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6 text-foreground" data-testid="text-services-heading">
-            Our Services
+            {t('services.heading')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Excellence in every experience we create
+            {t('services.subtitle')}
           </p>
         </div>
       </div>

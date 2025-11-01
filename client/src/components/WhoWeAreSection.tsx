@@ -1,7 +1,10 @@
 import corporateEventImage from '@assets/generated_images/Corporate_event_production_15e50c25.png';
 import royalEventImage from '@assets/generated_images/Saudi_royal_event_ceremony_31477189.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function WhoWeAreSection() {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
@@ -12,19 +15,19 @@ export default function WhoWeAreSection() {
               style={{ color: '#8c55b7' }}
               data-testid="text-who-we-are-label"
             >
-              About Us
+              {t('whoWeAre.label')}
             </p>
             <h2 
               className="text-5xl md:text-6xl font-bold mb-6"
               data-testid="text-who-we-are-heading"
             >
-              Who <span style={{ color: '#8c55b7' }}>we are</span>
+              {t('whoWeAre.title')} <span style={{ color: '#8c55b7' }}>{t('whoWeAre.titleHighlight')}</span>
             </h2>
             <p 
               className="text-lg leading-relaxed text-muted-foreground"
               data-testid="text-who-we-are-description"
             >
-              Whether you have ambitious visions or detailed plans, we have the expertise and cultural insight to support every step. RdP Group is your trusted partner in event production, city marketing, and royal ceremonies—ready to guide you through every phase of planning. We work closely with our partners every day to ensure your event runs like a well-oiled machine, no matter the scale. Together, we're a unified team set on making your vision an unforgettable experience.
+              {t('whoWeAre.description')}
             </p>
           </div>
 

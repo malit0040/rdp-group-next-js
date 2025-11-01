@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from '@/contexts/LanguageContext';
 import royalEventImage from '@assets/generated_images/Saudi_royal_event_ceremony_31477189.png';
 import cityscapeImage from '@assets/generated_images/Riyadh_modern_cityscape_9ad139d0.png';
 import corporateEventImage from '@assets/generated_images/Corporate_event_production_15e50c25.png';
@@ -21,6 +22,7 @@ interface HeroSliderProps {
 export default function HeroSlider({ onExploreClick, onContactClick }: HeroSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,13 +63,13 @@ export default function HeroSlider({ onExploreClick, onContactClick }: HeroSlide
           <div className="mb-8 animate-in fade-in duration-1000">
             <div className="inline-block mb-4">
               <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight">
-                Where Place Transforms into Experience and Identity into Story
+                {t('hero.title')}
               </h1>
             </div>
           </div>
 
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl animate-in fade-in duration-1000 delay-200">
-            We create a genuine connection between people and places... where details transform into experiences that are felt and told
+            {t('hero.subtitle')}
           </p>
 
           <div className="flex flex-wrap gap-4 animate-in fade-in duration-1000 delay-500">
@@ -77,7 +79,7 @@ export default function HeroSlider({ onExploreClick, onContactClick }: HeroSlide
               onClick={onExploreClick}
               data-testid="button-explore-work"
             >
-              Discover our services
+              {t('hero.cta')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
 
@@ -88,7 +90,7 @@ export default function HeroSlider({ onExploreClick, onContactClick }: HeroSlide
               onClick={onContactClick}
               data-testid="button-contact-us"
             >
-              Contact Us
+              {t('nav.contact')}
             </Button>
           </div>
         </div>

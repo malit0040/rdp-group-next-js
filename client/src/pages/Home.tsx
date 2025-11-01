@@ -16,9 +16,9 @@ export default function Home() {
         onExploreClick={() => setLocation('/portfolio')}
         onContactClick={() => setLocation('/contact')}
       />
-      <AboutSection />
-      <HorizontalAccordion />
       <ImpactSection />
+      <HorizontalAccordion />
+      <AboutSection />
       <Footer />
     </div>
   );

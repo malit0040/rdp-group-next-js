@@ -1,4 +1,5 @@
-import { Mail, MapPin, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { SiX } from 'react-icons/si';
 import { useLanguage } from '@/contexts/LanguageContext';
 import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
 
@@ -104,7 +105,7 @@ export default function Footer() {
                 aria-label="X (Twitter)"
                 data-testid="link-footer-twitter"
               >
-                <Twitter className="h-4 w-4 text-white" />
+                <SiX className="h-4 w-4 text-white" />
               </a>
               <a 
                 href="#" 

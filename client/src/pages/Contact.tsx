@@ -5,7 +5,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { SiX } from 'react-icons/si';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Contact() {
@@ -83,7 +84,7 @@ export default function Contact() {
                     aria-label="X (Twitter)"
                     data-testid="link-contact-twitter"
                   >
-                    <Twitter className="h-5 w-5" />
+                    <SiX className="h-5 w-5" />
                   </a>
                   <a 
                     href="#" 

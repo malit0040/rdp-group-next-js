@@ -35,12 +35,6 @@ export default function NewsletterSection() {
               {t('newsletter.button')}
             </Button>
           </div>
-
-          <div className="flex items-center justify-center gap-3">
-            <p className="text-sm text-muted-foreground" data-testid="text-newsletter-experts">
-              {t('footer.aboutDesc')}
-            </p>
-          </div>
         </div>
       </div>
     </section>

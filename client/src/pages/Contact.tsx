@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Contact() {
@@ -39,15 +39,6 @@ export default function Contact() {
                 </p>
 
                 <div className="space-y-6 mb-16">
-                  <a 
-                    href="tel:+966112345678" 
-                    className="flex items-center gap-4 text-white/90 hover-elevate rounded-lg p-3 transition-colors"
-                    data-testid="link-contact-phone"
-                  >
-                    <Phone className="h-5 w-5" />
-                    <span>+966 11 234 5678</span>
-                  </a>
-
                   <a 
                     href="mailto:support@rdp-ksa.com" 
                     className="flex items-center gap-4 text-white/90 hover-elevate rounded-lg p-3 transition-colors"
@@ -139,31 +130,17 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="email" className="text-sm font-semibold mb-2 block">
-                      {t('contact.email')}
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="example@company.com"
-                      className="rounded-lg"
-                      data-testid="input-email"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="phone" className="text-sm font-semibold mb-2 block">
-                      {t('contact.phone')}
-                    </Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="+966 50 123 4567"
-                      className="rounded-lg"
-                      data-testid="input-phone"
-                    />
-                  </div>
+                <div>
+                  <Label htmlFor="email" className="text-sm font-semibold mb-2 block">
+                    {t('contact.email')}
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="example@company.com"
+                    className="rounded-lg"
+                    data-testid="input-email"
+                  />
                 </div>
 
                 <div>

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
 
@@ -47,14 +47,6 @@ export default function Footer() {
               >
                 <Mail className="h-4 w-4 flex-shrink-0" style={{ color: '#1bc195' }} />
                 <span className="text-sm">ceo@rdp-ksa.com</span>
-              </a>
-              <a 
-                href="tel:+966112345678" 
-                className="flex items-center gap-3 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors"
-                data-testid="link-footer-phone"
-              >
-                <Phone className="h-4 w-4 flex-shrink-0" style={{ color: '#1bc195' }} />
-                <span className="text-sm">+966 11 234 5678</span>
               </a>
               <div 
                 className="flex items-start gap-3 text-white/90 px-3 py-2"

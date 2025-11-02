@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocation } from 'wouter';
 
 export default function CTASection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [, setLocation] = useLocation();
+  const isRTL = language === 'ar';
   
   return (
     <section className="relative overflow-hidden mb-0">
@@ -55,7 +56,11 @@ export default function CTASection() {
               onClick={() => setLocation('/contact')}
             >
               {t('cta.button')}
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              {isRTL ? (
+                <ArrowLeft className="mr-2 h-5 w-5 group-hover:-translate-x-1 transition-transform" />
+              ) : (
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              )}
             </Button>
           </div>
         </div>

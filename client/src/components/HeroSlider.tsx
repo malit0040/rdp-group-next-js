@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useLanguage } from '@/contexts/LanguageContext';
 import royalEventImage from '@assets/generated_images/Saudi_royal_event_ceremony_31477189.png';
 import cityscapeImage from '@assets/generated_images/Riyadh_modern_cityscape_9ad139d0.png';
@@ -22,7 +22,8 @@ interface HeroSliderProps {
 export default function HeroSlider({ onExploreClick, onContactClick }: HeroSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isRTL = language === 'ar';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -80,7 +81,11 @@ export default function HeroSlider({ onExploreClick, onContactClick }: HeroSlide
               data-testid="button-explore-work"
             >
               {t('hero.cta')}
-              <ArrowRight className="ml-2 h-5 w-5" />
+              {isRTL ? (
+                <ArrowLeft className="mr-2 h-5 w-5" />
+              ) : (
+                <ArrowRight className="ml-2 h-5 w-5" />
+              )}
             </Button>
 
             <Button

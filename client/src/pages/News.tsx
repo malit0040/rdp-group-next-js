@@ -3,7 +3,8 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, ArrowRight, Star } from 'lucide-react';
+import { Calendar, ArrowRight, ArrowLeft, Star } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const newsItems = [
   {
@@ -57,6 +58,9 @@ const newsItems = [
 ];
 
 export default function News() {
+  const { language } = useLanguage();
+  const isRTL = language === 'ar';
+  
   const getCategoryColor = (category: string) => {
     const colors: Record<string, string> = {
       'Company News': 'bg-blue-100 text-blue-800',
@@ -127,7 +131,11 @@ export default function News() {
                     data-testid={`button-news-read-${item.id}`}
                   >
                     Read More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    {isRTL ? (
+                      <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                    ) : (
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    )}
                   </Button>
                 </CardContent>
               </Card>

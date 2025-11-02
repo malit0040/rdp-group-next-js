@@ -90,7 +90,7 @@ const translations = {
     
     // CTA Section
     'cta.title': 'كن جزءًا من قصص النجاح',
-    'cta.description': 'دعنا نصنع شيئًا استثنائيًا معًا. تواصل معنا اليوم لبدء رحلتك.',
+    'cta.description': 'لنصنع معًا تجربة تعبّر وتصنع الأثر',
     'cta.button': 'ابدأ الآن',
     
     // Newsletter
@@ -245,7 +245,7 @@ const translations = {
     
     // CTA Section
     'cta.title': 'Be Part of Success Stories',
-    'cta.description': 'Let\'s create something extraordinary together. Contact us today to begin your journey.',
+    'cta.description': 'Let\'s create together an experience that expresses and makes an impact',
     'cta.button': 'Get Started',
     
     // Newsletter

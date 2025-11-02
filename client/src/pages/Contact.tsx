@@ -76,9 +76,11 @@ export default function Contact() {
                     <Facebook className="h-5 w-5" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://x.com/rdp_sa?s=21" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 hover-elevate flex items-center justify-center transition-all"
-                    aria-label="Twitter"
+                    aria-label="X (Twitter)"
                     data-testid="link-contact-twitter"
                   >
                     <Twitter className="h-5 w-5" />

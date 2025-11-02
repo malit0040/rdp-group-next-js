@@ -95,9 +95,11 @@ export default function Footer() {
                 <Linkedin className="h-4 w-4 text-white" />
               </a>
               <a 
-                href="#" 
+                href="https://x.com/rdp_sa?s=21" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 hover-elevate flex items-center justify-center transition-all"
-                aria-label="Twitter"
+                aria-label="X (Twitter)"
                 data-testid="link-footer-twitter"
               >
                 <Twitter className="h-4 w-4 text-white" />

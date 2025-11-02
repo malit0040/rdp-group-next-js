@@ -2,16 +2,18 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useLanguage } from '@/contexts/LanguageContext';
-import royalEventImage from '@assets/generated_images/Saudi_royal_event_ceremony_31477189.png';
-import cityscapeImage from '@assets/generated_images/Riyadh_modern_cityscape_9ad139d0.png';
-import corporateEventImage from '@assets/generated_images/Corporate_event_production_15e50c25.png';
-import advertisingImage from '@assets/generated_images/Advertising_campaign_production_f6b49896.png';
+import heroImage1 from '@assets/WhatsApp Image 2025-11-01 at 3.22.58 AM (1)_1762112223954.jpeg';
+import heroImage2 from '@assets/WhatsApp Image 2025-11-01 at 3.22.58 AM (2)_1762112223954.jpeg';
+import heroImage3 from '@assets/WhatsApp Image 2025-11-01 at 3.23.09 AM (2)_1762112223955.jpeg';
+import heroImage4 from '@assets/WhatsApp Image 2025-11-01 at 3.23.27 AM_1762112223956.jpeg';
+import heroImage5 from '@assets/WhatsApp Image 2025-11-01 at 3.23.49 AM_1762112223957.jpeg';
 
 const slides = [
-  { image: royalEventImage, alt: "Royal Event Ceremony" },
-  { image: cityscapeImage, alt: "Riyadh Cityscape" },
-  { image: corporateEventImage, alt: "Corporate Event" },
-  { image: advertisingImage, alt: "Advertising Campaign" },
+  { image: heroImage1, alt: "RdP Group Event" },
+  { image: heroImage2, alt: "City Marketing" },
+  { image: heroImage3, alt: "Urban Development" },
+  { image: heroImage4, alt: "Cultural Experience" },
+  { image: heroImage5, alt: "City Identity" },
 ];
 
 interface HeroSliderProps {

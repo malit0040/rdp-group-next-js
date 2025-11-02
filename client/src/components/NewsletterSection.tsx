@@ -1,11 +1,7 @@
 import { Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useLanguage } from '@/contexts/LanguageContext';
-import marketingDirector from '@assets/generated_images/Marketing_director_headshot_b771cf32.png';
-import teamMember1 from '@assets/generated_images/Saudi_executive_team_member_d0d3e5dc.png';
-import teamMember2 from '@assets/generated_images/Saudi_female_team_member_095ee012.png';
 
 export default function NewsletterSection() {
   const { t } = useLanguage();
@@ -38,26 +34,6 @@ export default function NewsletterSection() {
             >
               {t('newsletter.button')}
             </Button>
-          </div>
-
-          <div className="flex items-center justify-center gap-3">
-            <p className="text-sm text-muted-foreground" data-testid="text-newsletter-experts">
-              {t('footer.aboutDesc')}
-            </p>
-            <div className="flex -space-x-2">
-              <Avatar className="border-2 border-background h-8 w-8">
-                <AvatarImage src={marketingDirector} alt="Team member" />
-                <AvatarFallback>T1</AvatarFallback>
-              </Avatar>
-              <Avatar className="border-2 border-background h-8 w-8">
-                <AvatarImage src={teamMember1} alt="Team member" />
-                <AvatarFallback>T2</AvatarFallback>
-              </Avatar>
-              <Avatar className="border-2 border-background h-8 w-8">
-                <AvatarImage src={teamMember2} alt="Team member" />
-                <AvatarFallback>T3</AvatarFallback>
-              </Avatar>
-            </div>
           </div>
         </div>
       </div>

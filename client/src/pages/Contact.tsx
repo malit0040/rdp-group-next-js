@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -8,9 +9,70 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { SiX } from 'react-icons/si';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useMutation } from '@tanstack/react-query';
+import { useToast } from '@/hooks/use-toast';
+import { apiRequest } from '@/lib/queryClient';
 
 export default function Contact() {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    subject: 'urban',
+    message: '',
+  });
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: typeof formData) => {
+      return await apiRequest('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+    },
+    onSuccess: () => {
+      toast({
+        title: t('contact.successTitle') || 'Message Sent!',
+        description: t('contact.successMessage') || 'Thank you for contacting us. We will get back to you soon.',
+      });
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        subject: 'urban',
+        message: '',
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: t('contact.errorTitle') || 'Error',
+        description: error.message || 'Failed to send message. Please try again.',
+        variant: 'destructive',
+      });
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    contactMutation.mutate(formData);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
   
   return (
     <div className="min-h-screen">
@@ -109,7 +171,7 @@ export default function Contact() {
             </div>
 
             <div className="p-12 bg-white">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="firstName" className="text-sm font-semibold mb-2 block">
@@ -117,8 +179,11 @@ export default function Contact() {
                     </Label>
                     <Input
                       id="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       placeholder="Ahmed"
                       className="rounded-lg"
+                      required
                       data-testid="input-first-name"
                     />
                   </div>
@@ -128,8 +193,11 @@ export default function Contact() {
                     </Label>
                     <Input
                       id="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       placeholder="Al-Rashid"
                       className="rounded-lg"
+                      required
                       data-testid="input-last-name"
                     />
                   </div>
@@ -142,9 +210,27 @@ export default function Contact() {
                   <Input
                     id="email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="example@company.com"
                     className="rounded-lg"
+                    required
                     data-testid="input-email"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="phone" className="text-sm font-semibold mb-2 block">
+                    {t('contact.phone')}
+                  </Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+966 5x xxx xxxx"
+                    className="rounded-lg"
+                    data-testid="input-phone"
                   />
                 </div>
 
@@ -152,7 +238,11 @@ export default function Contact() {
                   <Label className="text-sm font-semibold mb-4 block">
                     {t('contact.service')}
                   </Label>
-                  <RadioGroup defaultValue="urban" className="grid grid-cols-2 gap-4">
+                  <RadioGroup 
+                    value={formData.subject} 
+                    onValueChange={(value) => setFormData({ ...formData, subject: value })}
+                    className="grid grid-cols-2 gap-4"
+                  >
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="urban" id="urban" data-testid="radio-urban" />
                       <Label htmlFor="urban" className="cursor-pointer">{t('contact.urbanConsulting')}</Label>
@@ -178,9 +268,13 @@ export default function Contact() {
                   </Label>
                   <Textarea
                     id="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder={t('contact.messagePlaceholder')}
                     rows={6}
                     className="rounded-lg resize-none"
+                    required
+                    minLength={10}
                     data-testid="textarea-message"
                   />
                 </div>
@@ -190,9 +284,10 @@ export default function Contact() {
                   size="lg"
                   className="w-full rounded-lg"
                   style={{ backgroundColor: '#024442' }}
+                  disabled={contactMutation.isPending}
                   data-testid="button-send-message"
                 >
-                  {t('contact.send')}
+                  {contactMutation.isPending ? t('contact.sending') || 'Sending...' : t('contact.send')}
                 </Button>
               </form>
             </div>

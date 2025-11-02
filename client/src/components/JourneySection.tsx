@@ -1,7 +1,5 @@
 import { Target, Lightbulb, FileText, Rocket } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import directorImage from '@assets/generated_images/Marketing_director_headshot_b771cf32.png';
 
 export default function JourneySection() {
   const { t } = useLanguage();
@@ -83,53 +81,6 @@ export default function JourneySection() {
               )}
             </div>
           ))}
-        </div>
-
-        <div className="text-center mb-16">
-          <Button
-            variant="outline"
-            size="lg"
-            className="rounded-full bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm"
-            data-testid="button-our-process"
-          >
-            Our Process
-          </Button>
-        </div>
-
-        <div 
-          className="bg-white rounded-3xl p-12 max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center"
-          data-testid="container-testimonial"
-        >
-          <div>
-            <blockquote className="text-2xl md:text-3xl font-serif text-foreground mb-6 leading-relaxed">
-              "{t('journey.testimonial')}"
-            </blockquote>
-            <div className="border-t pt-6">
-              <p className="font-bold text-lg text-foreground" data-testid="text-testimonial-name">
-                {t('journey.testimonialAuthor')}
-              </p>
-              <p className="text-muted-foreground" data-testid="text-testimonial-title">
-                {t('journey.testimonialRole')}
-              </p>
-            </div>
-            <Button
-              variant="default"
-              size="lg"
-              className="mt-6 rounded-full"
-              style={{ backgroundColor: '#024442' }}
-              data-testid="button-about-rdp"
-            >
-              {t('whoWeAre.label')}
-            </Button>
-          </div>
-          <div className="flex justify-center">
-            <img 
-              src={directorImage}
-              alt="Ahmed Al-Rashid"
-              className="rounded-2xl w-full max-w-sm object-cover shadow-lg"
-              data-testid="img-testimonial"
-            />
-          </div>
         </div>
       </div>
     </section>

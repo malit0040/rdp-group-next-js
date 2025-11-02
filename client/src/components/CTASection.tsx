@@ -1,9 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLocation } from 'wouter';
 
 export default function CTASection() {
   const { t } = useLanguage();
+  const [, setLocation] = useLocation();
   
   return (
     <section className="relative overflow-hidden mb-0">
@@ -50,6 +52,7 @@ export default function CTASection() {
               variant="outline"
               className="rounded-full bg-white text-foreground hover:bg-white/90 border-white px-8 group"
               data-testid="button-cta-connect"
+              onClick={() => setLocation('/contact')}
             >
               {t('cta.button')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

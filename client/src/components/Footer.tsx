@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, ExternalLink, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import logoImage from '@assets/rdp-group-logo-removebg-preview_1761980239646.png';
 
@@ -22,7 +22,7 @@ export default function Footer() {
       />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div>
             <h3 
               className="text-xl font-semibold mb-6" 
@@ -63,42 +63,6 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: '#1bc195' }} />
                 <span className="text-sm">Riyadh, Saudi Arabia</span>
               </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 
-              className="text-xl font-semibold mb-6" 
-              style={{ color: '#1bc195' }}
-              data-testid="text-footer-platforms-heading"
-            >
-              {t('footer.platforms')}
-            </h3>
-            <div className="space-y-3">
-              <a 
-                href="#" 
-                className="flex items-center gap-2 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors group"
-                data-testid="link-footer-events"
-              >
-                <span className="text-sm">{t('footer.eventsplatform')}</span>
-                <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#1bc195' }} />
-              </a>
-              <a 
-                href="#" 
-                className="flex items-center gap-2 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors group"
-                data-testid="link-footer-marketing"
-              >
-                <span className="text-sm">{t('footer.marketingHub')}</span>
-                <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#1bc195' }} />
-              </a>
-              <a 
-                href="#" 
-                className="flex items-center gap-2 text-white/90 hover-elevate rounded-md px-3 py-2 transition-colors group"
-                data-testid="link-footer-portfolio"
-              >
-                <span className="text-sm">{t('footer.portfolio')}</span>
-                <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#1bc195' }} />
-              </a>
             </div>
           </div>
 

@@ -137,34 +137,42 @@ const translations = {
     'projects.riyadhColorsDesc': 'مهرجان ثقافي يحتفي بالتنوع والتراث في الرياض',
     
     // News Page
-    'news.title': 'آخر الأخبار',
-    'news.subtitle': 'ابق على اطلاع بأحدث أخبارنا ورؤانا',
+    'news.heading': 'الأخبار والتحديثات',
+    'news.subtitle': 'ابق على اطلاع بأحدث مشاريعنا وإنجازاتنا ورؤانا الصناعية',
     'news.featured': 'مميز',
     'news.readMore': 'اقرأ المزيد',
-    'news.date1': '15 أكتوبر 2024',
-    'news.date2': '10 أكتوبر 2024',
-    'news.date3': '5 أكتوبر 2024',
-    'news.date4': '28 سبتمبر 2024',
-    'news.date5': '20 سبتمبر 2024',
-    'news.date6': '15 سبتمبر 2024',
-    'news.title1': 'RdP Group تطلق منصة تسويق مدن مبتكرة',
-    'news.desc1': 'نقدم حلولنا الجديدة التي تدمج التكنولوجيا مع الاستراتيجيات التقليدية لتسويق المدن.',
-    'news.title2': 'شراكة جديدة مع وزارة السياحة السعودية',
-    'news.desc2': 'نحن فخورون بالإعلان عن شراكتنا الاستراتيجية لتعزيز السياحة في جميع أنحاء المملكة.',
-    'news.title3': 'تمديد مشروع عداد الرياض حتى 2025',
-    'news.desc3': 'بناءً على النجاح الباهر، تم تمديد مشروعنا الرائد لعام آخر.',
-    'news.title4': 'رؤى: مستقبل تسويق المدن',
-    'news.desc4': 'يشارك خبراؤنا رؤاهم حول الاتجاهات الناشئة في تسويق المدن والتطوير الحضري.',
-    'news.title5': 'حفل جوائز ألوان الرياض: نجاح باهر',
-    'news.desc5': 'جذب مهرجاننا الثقافي السنوي أكثر من 50,000 زائر احتفلوا بتراث الرياض.',
-    'news.title6': 'التوسع الدولي: RdP تصل دبي',
-    'news.desc6': 'نوسع عملياتنا للإمارات العربية المتحدة، جالبين خبرتنا إلى أسواق جديدة.',
-    'news.category.announcement': 'إعلان',
-    'news.category.partnership': 'شراكة',
-    'news.category.project': 'مشروع',
-    'news.category.insights': 'رؤى',
-    'news.category.event': 'فعالية',
-    'news.category.expansion': 'توسع',
+    
+    // News Categories
+    'news.category.companyNews': 'أخبار الشركة',
+    'news.category.partnerships': 'شراكات',
+    'news.category.events': 'فعاليات',
+    'news.category.achievements': 'إنجازات',
+    'news.category.awards': 'جوائز',
+    
+    // News Items
+    'news.item1.title': 'إطلاق مبادرة هوية حضرية جديدة',
+    'news.item1.excerpt': 'نحن فخورون بالإعلان عن إطلاق مبادرتنا الجديدة لتطوير الهوية الحضرية للمدن السعودية، والتي تهدف إلى...',
+    'news.item1.date': '15 يناير 2025',
+    
+    'news.item2.title': 'نجاح فعالية الترويج السياحي',
+    'news.item2.excerpt': 'حققت فعاليتنا الأخيرة للترويج السياحي نجاحًا كبيرًا بمشاركة أكثر من 500 زائر من جميع أنحاء العالم...',
+    'news.item2.date': '10 يناير 2025',
+    
+    'news.item3.title': 'شراكة استراتيجية جديدة',
+    'news.item3.excerpt': 'نعلن عن شراكتنا الاستراتيجية الجديدة مع العديد من الجهات الحكومية والخاصة لتعزيز الاستثمار في المدن السعودية...',
+    'news.item3.date': '5 يناير 2025',
+    
+    'news.item4.title': 'نجاح التحول الرقمي في جدة التاريخية',
+    'news.item4.excerpt': 'إنجاز مشروع منصة رقمية تفاعلية تُعرّف الزوار بتاريخ وثقافة جدة التاريخية من خلال تقنيات الواقع المعزز',
+    'news.item4.date': '28 ديسمبر 2024',
+    
+    'news.item5.title': 'ورشة عمل: مستقبل التسويق الحضري في المملكة',
+    'news.item5.excerpt': 'تنظيم ورشة عمل متخصصة للمهتمين بالتسويق الحضري والابتكار في تطوير المدن',
+    'news.item5.date': '20 ديسمبر 2024',
+    
+    'news.item6.title': 'جائزة التميز في التسويق الحضري 2024',
+    'news.item6.excerpt': 'فوز الشركة بجائزة التميز في التسويق الحضري من منظمة المدن العربية لعام 2024',
+    'news.item6.date': '15 ديسمبر 2024',
   },
   en: {
     // Header
@@ -292,34 +300,42 @@ const translations = {
     'projects.riyadhColorsDesc': 'Cultural festival celebrating diversity and heritage in Riyadh',
     
     // News Page
-    'news.title': 'Latest News',
-    'news.subtitle': 'Stay informed with our latest news and insights',
+    'news.heading': 'News & Updates',
+    'news.subtitle': 'Stay informed about our latest projects, achievements, and industry insights',
     'news.featured': 'Featured',
     'news.readMore': 'Read More',
-    'news.date1': 'October 15, 2024',
-    'news.date2': 'October 10, 2024',
-    'news.date3': 'October 5, 2024',
-    'news.date4': 'September 28, 2024',
-    'news.date5': 'September 20, 2024',
-    'news.date6': 'September 15, 2024',
-    'news.title1': 'RdP Group Launches Innovative City Marketing Platform',
-    'news.desc1': 'Introducing our new solution that combines technology with traditional city marketing strategies.',
-    'news.title2': 'New Partnership with Saudi Tourism Ministry',
-    'news.desc2': 'We\'re proud to announce our strategic partnership to enhance tourism across the Kingdom.',
-    'news.title3': 'Riyadh Counter Project Extended to 2025',
-    'news.desc3': 'Based on overwhelming success, our flagship project has been extended for another year.',
-    'news.title4': 'Insights: The Future of City Marketing',
-    'news.desc4': 'Our experts share insights on emerging trends in city marketing and urban development.',
-    'news.title5': 'Riyadh Colors Awards Ceremony: A Grand Success',
-    'news.desc5': 'Our annual cultural festival attracted over 50,000 visitors celebrating Riyadh\'s heritage.',
-    'news.title6': 'International Expansion: RdP Reaches Dubai',
-    'news.desc6': 'Expanding our operations to the UAE, bringing our expertise to new markets.',
-    'news.category.announcement': 'Announcement',
-    'news.category.partnership': 'Partnership',
-    'news.category.project': 'Project',
-    'news.category.insights': 'Insights',
-    'news.category.event': 'Event',
-    'news.category.expansion': 'Expansion',
+    
+    // News Categories
+    'news.category.companyNews': 'Company News',
+    'news.category.partnerships': 'Partnerships',
+    'news.category.events': 'Events',
+    'news.category.achievements': 'Achievements',
+    'news.category.awards': 'Awards',
+    
+    // News Items
+    'news.item1.title': 'Launching a New Urban Identity Initiative',
+    'news.item1.excerpt': 'We are proud to announce the launch of our new initiative to develop the urban identity of Saudi cities, which aims to...',
+    'news.item1.date': 'January 15, 2025',
+    
+    'news.item2.title': 'Tourism Promotion Event Success',
+    'news.item2.excerpt': 'Our latest tourism promotion event achieved great success with the participation of more than 500 visitors from around the world...',
+    'news.item2.date': 'January 10, 2025',
+    
+    'news.item3.title': 'New Strategic Partnership',
+    'news.item3.excerpt': 'We announce our new strategic partnership with several government and private entities to enhance investment in Saudi cities...',
+    'news.item3.date': 'January 5, 2025',
+    
+    'news.item4.title': 'Digital Transformation Success in Historic Jeddah',
+    'news.item4.excerpt': 'Completion of an interactive digital platform project that introduces visitors to the history and culture of historic Jeddah through augmented reality technologies',
+    'news.item4.date': 'December 28, 2024',
+    
+    'news.item5.title': 'Workshop: The Future of Urban Marketing in the Kingdom',
+    'news.item5.excerpt': 'Organizing a specialized workshop for those interested in urban marketing and innovation in city development',
+    'news.item5.date': 'December 20, 2024',
+    
+    'news.item6.title': 'Excellence Award in Urban Marketing 2024',
+    'news.item6.excerpt': 'The company wins the Excellence Award in Urban Marketing from the Arab Towns Organization for 2024',
+    'news.item6.date': 'December 15, 2024',
   }
 };
 

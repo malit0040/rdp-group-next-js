@@ -4,13 +4,13 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useLanguage } from '@/contexts/LanguageContext';
 import royalEventImage from '@assets/generated_images/Saudi_royal_event_ceremony_31477189.png';
 import cityscapeImage from '@assets/generated_images/Riyadh_modern_cityscape_9ad139d0.png';
-import corporateEventImage from '@assets/generated_images/Corporate_event_production_15e50c25.png';
+import newHeroImage from '@assets/WhatsApp Image 2025-11-01 at 3.23.26 AM (1)_1762112521200.jpeg';
 import advertisingImage from '@assets/generated_images/Advertising_campaign_production_f6b49896.png';
 
 const slides = [
   { image: royalEventImage, alt: "Royal Event Ceremony" },
   { image: cityscapeImage, alt: "Riyadh Cityscape" },
-  { image: corporateEventImage, alt: "Corporate Event" },
+  { image: newHeroImage, alt: "RdP Group Event" },
   { image: advertisingImage, alt: "Advertising Campaign" },
 ];
 

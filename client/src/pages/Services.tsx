@@ -77,7 +77,7 @@ export default function Services() {
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-3xl mb-3" data-testid={`text-service-title-${service.id}`}>
+                      <CardTitle className="text-2xl mb-3" data-testid={`text-service-title-${service.id}`}>
                         {service.title}
                       </CardTitle>
                       <p className="text-lg text-muted-foreground mb-6" data-testid={`text-service-description-${service.id}`}>

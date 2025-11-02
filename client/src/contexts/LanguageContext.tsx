@@ -89,7 +89,7 @@ const translations = {
     'journey.testimonialRole': 'مدير التطوير الحضري',
     
     // CTA Section
-    'cta.title': 'جاهز لتحويل مدينتك؟',
+    'cta.title': 'كن جزءًا من قصص النجاح',
     'cta.description': 'دعنا نصنع شيئًا استثنائيًا معًا. تواصل معنا اليوم لبدء رحلتك.',
     'cta.button': 'ابدأ الآن',
     
@@ -244,7 +244,7 @@ const translations = {
     'journey.testimonialRole': 'Director of Urban Development',
     
     // CTA Section
-    'cta.title': 'Ready to Transform Your City?',
+    'cta.title': 'Be Part of Success Stories',
     'cta.description': 'Let\'s create something extraordinary together. Contact us today to begin your journey.',
     'cta.button': 'Get Started',
     

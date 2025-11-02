@@ -94,7 +94,9 @@ export default function Contact() {
                     <Instagram className="h-5 w-5" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.linkedin.com/company/rdp-sa/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 hover-elevate flex items-center justify-center transition-all"
                     aria-label="LinkedIn"
                     data-testid="link-contact-linkedin"

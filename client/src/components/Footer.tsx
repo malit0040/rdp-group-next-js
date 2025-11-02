@@ -87,7 +87,9 @@ export default function Footer() {
             
             <div className="flex gap-3">
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/rdp-sa/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 hover-elevate flex items-center justify-center transition-all"
                 aria-label="LinkedIn"
                 data-testid="link-footer-linkedin"

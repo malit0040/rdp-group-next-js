@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import corporateEventImage from '@assets/generated_images/Corporate_event_production_15e50c25.png';
 import royalEventImage from '@assets/generated_images/Saudi_royal_event_ceremony_31477189.png';
 import advertisingImage from '@assets/generated_images/Advertising_campaign_production_f6b49896.png';
-import cityscapeImage from '@assets/generated_images/Riyadh_modern_cityscape_9ad139d0.png';
+import cityscapeImage from '@assets/urban-consulting-innovation.jpeg';
 
 export default function HorizontalAccordion() {
   const [activeIndex, setActiveIndex] = useState(0);

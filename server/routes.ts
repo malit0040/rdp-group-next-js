@@ -40,7 +40,7 @@ console.log(p);
         secure: false, // true for 465, false for 587
         auth: {
           user: process.env.EMAIL_USER || "support@rdp-ksa.com",
-          pass: process.env.EMAIL_PASSWORD || "Pinta412!",
+          pass: process.env.EMAIL_PASSWORD,
         },
         tls: {
           rejectUnauthorized: false,
